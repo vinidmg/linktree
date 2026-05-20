@@ -1,0 +1,125 @@
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* configurando variáveis */
+:root {
+    --bg-page: #141414;
+    --bg-card: #1e1e1e;
+    --bg-link: #2a2a2a;
+    --cor-destaque: #c5f230;
+    --texto-primario: #ffffff;
+    --texto-secundario: #888888;
+    --texto-destaque: #141414;
+    --fonte: 'Outfit', sans-serif;
+}
+
+/* fade-in */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeInUp 3s ease forwards;
+}
+
+/* parte principal e card */
+
+body {
+    font-family: var(--fonte);
+    background-color: var(--bg-page);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+main {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* imagem de perfil */
+
+.imagem-perfil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+/* textos */
+.titulo {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--texto-primario);
+    text-align: center;
+}
+
+.subtitulo {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--cor-destaque);
+    text-align: center;
+}
+
+.texto-apresentacao {
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+    text-align: center;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.5;
+}
+
+/* links */
+
+.lista-links {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.lista-links-link {
+    display: block;
+    background-color: var(--bg-link);
+    color: var(--texto-primario);
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lista-links-link:hover {
+    background-color: var(--cor-destaque);
+    color: var(--texto-destaque);
+}
+
+.lista-links-link:focus {
+    outline: 2px solid var(--cor-destaque);
+    outline-offset: 2px;
+    background-color: var(--bg-link);
+}
